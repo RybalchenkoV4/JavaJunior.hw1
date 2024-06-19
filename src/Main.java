@@ -8,7 +8,7 @@ public class Main {
 
         List<Integer> list = creatListWithRandomNumbers(10, 1, 5);
 
-        OptionalDouble average = list.stream().mapToInt(e -> e).average();
+        OptionalDouble average = list.stream().filter(e -> e % 2 == 0).mapToInt(e -> e).average();
 
         System.out.println(list);
 
